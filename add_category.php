@@ -11,7 +11,7 @@
         if ($conn->query($data_insert) === TRUE) {
             echo "Data Insert Successfully";
         } else {
-            echo "Error: " . $data_insert . "<br>" . $conn->error;
+            echo `Error: $data_insert  "<br>"  $conn->error`;
         }  
     }
 
