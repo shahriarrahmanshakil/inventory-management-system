@@ -9,13 +9,9 @@
         
         $insert_product = "INSERT INTO product(product_name,product_category,product_code,product_entry_date)
                             VALUES('$product_name',' $product_category','$product_code','$product_entry_date')";
+
         $insert_product_query = $conn->query($insert_product);
     }
-?>
-
-<?php
-
-     
 ?>
 
 <!DOCTYPE html>
