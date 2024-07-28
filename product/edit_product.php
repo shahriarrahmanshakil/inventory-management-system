@@ -25,6 +25,16 @@
         $new_product_category = $_GET['product_category'];
         $new_product_code = $_GET['product_code'];
         $new_product_entry_date = $_GET['product_entry_date'];
+
+        $update_product = "UPDATE product 
+                           SET product_name       = '$new_product_name',
+                               product_category   = '$new_product_category', 
+                               product_code       = '$new_product_code',
+                               product_entry_date = '$new_product_entry_date' 
+                           WHERE product_id = $new_product_id";
+                           
+        $update_product_query = $conn->query($update_product);
+        
     }
 
 ?>
