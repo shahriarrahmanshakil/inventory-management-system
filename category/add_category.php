@@ -1,5 +1,5 @@
 <?php
-    require("connect_db.php");
+    require("../connect_db.php");
 
     if (isset($_POST['btnsubmit'])) {
         $category_name       = $_POST['category_name'];

@@ -1,5 +1,6 @@
 <?php
-    require("connect_db.php");
+    require("../connect_db.php");
+
 
     if(isset($_GET['id'])){
         $get_category_id = $_GET['id'];
