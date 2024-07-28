@@ -37,7 +37,7 @@
                         <td>$category_name</td>
                         <td>$category_entry_date</td>
                         <td>
-                            <a href='edit_category.php?id=$category_id'>Edit </a>
+                            <a href='edit_category.php?id=$category_id'>Edit</a>
                         </td>
                     </tr>";
             }
