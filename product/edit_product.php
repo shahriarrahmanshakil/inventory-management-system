@@ -36,7 +36,7 @@
         $update_product_query = $conn->query($update_product);
         
     }
-
+    
 ?>
 
 <!DOCTYPE html>
