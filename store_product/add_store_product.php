@@ -7,13 +7,9 @@
         		
         $insert_store_product ="INSERT INTO store_product(store_product_name,store_product_quantity,store_product_entry_date)
                                 VALUES('$store_product','$store_product_quantity','$store_product_entry_date')";
+                                
         $insert_store_product_query = $conn->query($insert_store_product);
-        
-
     }
-
-
-
 ?>
 
 <!DOCTYPE html>
