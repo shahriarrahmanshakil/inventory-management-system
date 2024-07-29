@@ -1,5 +1,16 @@
 <?php
     require("../connect_db.php");
+    if(isset($_POST['btnsubmit'])){
+        $store_product =  $_POST['store_product'];
+        $store_product_quantity =  $_POST['s_p_q'];
+        $store_product_entry_date =  $_POST['s_p_entry_date'];
+        		
+        $insert_store_product ="INSERT INTO store_product(store_product_name,store_product_quantity,store_product_entry_date)
+                                VALUES('$store_product','$store_product_quantity','$store_product_entry_date')";
+        $insert_store_product_query = $conn->query($insert_store_product);
+        
+
+    }
 
 
 
@@ -22,10 +33,9 @@
                 while($store_product_array = mysqli_fetch_assoc($select_product_query)){
                     $product_id = $store_product_array['product_id'];
                     $product_name = $store_product_array['product_name'];
-    
+
                     echo "<option value='$product_id'> $product_name</option>";
                 }
-
             ?>
         </select><br><br>
         <label for="s_p_q">Store Product Quantity</label><br>
