@@ -1,6 +1,21 @@
 <?php
     require("../connect_db.php");
 
+    $select_product = "SELECT * FROM product";
+    $product_query = $conn->query($select_product);
+
+    $product_list = array();
+
+    while($product_array = mysqli_fetch_assoc($product_query)){
+        $product_id = $product_array['product_id'];
+        $product_name = $product_array['product_name'];
+
+        $product_list[$product_id] =  $product_name;
+
+    }
+?>
+
+<?php
     $select_spend_product = "SELECT * FROM spend_product";
     $spend_product_query = $conn->query($select_spend_product);
 
@@ -20,32 +35,14 @@
         $spend_product_entry_date = $spend_product_array['spend_product_entry_date'];
 
         echo "<tr>
-                <td>$spend_product_id         </td>
-                <td>$spend_product_name       </td>
-                <td>$spend_product_quantity   </td>
-                <td>$spend_product_entry_date </td>
+                <td>$spend_product_id</td>
+                <td>$product_list[$spend_product_name]</td>
+                <td>$spend_product_quantity</td>
+                <td>$spend_product_entry_date</td>
                 <td>Edit</td>
         </tr>";
     }
     echo "</table>";
-?>
-
-<?php
-
-    $select_product = "SELECT * FROM product";
-    $product_query = $conn->query($select_product);
-
-    $product_list = array();
-
-    while($product_array = mysqli_fetch_assoc($product_query)){
-        $product_id = $product_array['product_id'];
-        $product_name = $product_array['product_name'];
-
-        $product_list[$product_id] =  $product_name;
-
-    }
-    print_r($product_list);
-
 ?>
 
 <!DOCTYPE html>
