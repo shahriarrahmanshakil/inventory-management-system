@@ -11,7 +11,6 @@
         $product_name = $product_array['product_name'];
 
         $product_list[$product_id] =  $product_name;
-
     }
 ?>
 
@@ -39,7 +38,9 @@
                 <td>$product_list[$spend_product_name]</td>
                 <td>$spend_product_quantity</td>
                 <td>$spend_product_entry_date</td>
-                <td>Edit</td>
+                <td>
+                    <a href='edit_spend_product.php?id= $spend_product_id'>Edit</a>
+                </td>
         </tr>";
     }
     echo "</table>";
