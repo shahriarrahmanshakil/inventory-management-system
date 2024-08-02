@@ -9,6 +9,7 @@
         <th>User ID</th> 
         <th>User Name</th> 
         <th>User Email</th> 
+        <th>Action</th> 
     </tr>";
     while($array_users_info = mysqli_fetch_assoc($query_users_info)){
         $user_id = $array_users_info['user_id'];
@@ -16,9 +17,12 @@
         $user_email = $array_users_info['user_email'];
 
         echo "<tr>
-            <td> $user_id</td>
-            <td> $user_name</td>
-            <td> $user_email</td>
+            <td>$user_id</td>
+            <td>$user_name</td>
+            <td>$user_email</td>
+            <td>
+                <a href='edit_user_info.php?id=$user_id'>Edit</a> 
+            </td>
         </tr>";
     }
     echo "</table>";
