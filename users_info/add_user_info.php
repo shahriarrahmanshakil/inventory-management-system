@@ -1,3 +1,19 @@
+<?php
+    require("../connect_db.php");
+
+    if(isset($_POST['btnsubmit'])){
+        $user_name = $_POST['user_name'];
+        $user_email = $_POST['user_email'];
+        $user_password = $_POST['user_password'];
+
+        $user_sql = "INSERT INTO users_info(user_name, user_email, user_password)
+                        VALUES('$user_name','$user_email','$user_password')";
+        $user_query = $conn->query($user_sql);
+        			
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
