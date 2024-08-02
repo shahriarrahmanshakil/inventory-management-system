@@ -29,7 +29,7 @@
         <input type="email" id="user_email" name="user_email"><br><br>
         <label for="user_password">User Password</label><br>
         <input type="password" id="user_password" name="user_password"><br><br>
-        <input type="submit" name="btnsubmit" value="Login">
+        <input type="submit" name="btnsubmit" value="Register">
     </form>
 </body>
 </html>

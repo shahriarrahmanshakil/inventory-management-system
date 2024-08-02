@@ -47,7 +47,7 @@
         <input type="email" id="user_email" name="user_email" value="<?php echo $user_email?>"><br><br>
         <label for="user_password">User Password</label><br>
         <input type="password" id="user_password" name="user_password" value="<?php echo $user_password?>"><br><br>
-        <input type="text" id="user_id" name="user_id" value="<?php echo $user_id ?>" hidden><br><br>
+        <input type="text" id="user_id" name="user_id" value="<?php echo $user_id ?>" hidden>
         <input type="submit" name="btnsubmit" value="Update">
     </form>
 </body>
